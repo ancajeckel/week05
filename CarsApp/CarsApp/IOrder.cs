@@ -10,6 +10,12 @@ namespace CarsApp
     {
         decimal GetAgreedPrice();
 
+        void ValidateOrder(int estDeliveryTimeWeeks, decimal discount);
+
+        void UpdateOrder(IPerson person, string newStatus);
+
+        void CancelOrder(IPerson byPerson);
+
         void PrintOrderDetails();
     }
 }

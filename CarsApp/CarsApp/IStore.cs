@@ -8,7 +8,8 @@ namespace CarsApp
 {
     interface IStore
     {
-        void PrintStoreDetails();
+        void CheckStoreOffer(IPerson person);
 
+        void PrintStoreDetails();
     }
 }

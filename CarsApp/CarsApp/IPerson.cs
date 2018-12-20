@@ -8,6 +8,8 @@ namespace CarsApp
 {
     interface IPerson
     {
+        string GetName();
+
         void PrintPersonDetails();
     }
 }

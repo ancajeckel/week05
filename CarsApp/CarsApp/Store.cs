@@ -14,11 +14,24 @@ namespace CarsApp
 
         public Producer MainBrand { get; private set; }
 
-        public Store(string name, string city, Producer mainBrand)
+        public IPerson Representant { get; private set; }
+
+        public Store(string name, string city, Producer mainBrand, IPerson representant)
         {
             this.Name = name;
             this.City = city;
             this.MainBrand = mainBrand;
+            this.Representant = representant;
+        }
+
+        public void CheckStoreOffer(IPerson person)
+        {
+            Console.WriteLine("");
+            Console.WriteLine($"{person.GetName()} checks {this.MainBrand.Name} offer: ");
+            foreach (var car in Car.GetListCars(this.MainBrand))
+            {
+                car.PrintVehicleDetails();
+            }
         }
         
         public void PrintStoreDetails()

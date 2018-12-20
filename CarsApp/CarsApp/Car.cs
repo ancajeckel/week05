@@ -14,12 +14,19 @@ namespace CarsApp
 
         public int BasePrice { get; private set; }
 
+        public string Color { get; private set; }
+
+        public string Issues { get; private set; }
+
+        public string Status { get; private set; }
+
         public static List<Car> cars { get; private set; } = new List<Car>();
 
-        public Car(Producer model, int year, int basePrice)
+        public Car(Producer model, int year, string color, int basePrice)
         {
             this.Model = model;
             this.Year = year;
+            this.Color = color;
             this.BasePrice = basePrice;
             cars.Add(this);
         }
@@ -43,9 +50,20 @@ namespace CarsApp
             return tempCarList;
         }
 
+        public void ReportIssue(string issue)
+        {
+            this.Issues = issue;
+            this.Status = "new";
+            this.PrintVehicleDetails();
+        }
+
         public void PrintVehicleDetails()
         {
-            Console.WriteLine($"Car model: {this.Model.Name} ({this.Year}), base price: {this.BasePrice}");
+            Console.WriteLine($"Car model: {this.Model.Name} ({this.Year}), base price: ${this.BasePrice}");
+            if (this.Issues != null)
+            {
+                Console.WriteLine($"\t* has following issues reported: {this.Issues}");
+            }
         }
     }
 }

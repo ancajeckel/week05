@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace CarsApp
 {
-    class Customer : IPerson
+    public class Seller : IPerson
     {
-        public string Name { get; set; }
+        public string Name { get; private set; }
 
-        public string TelNumber { get; set; }
+        public int LicenseNo { get; private set; }
 
-        public Customer(string name, string telNumber)
+        public Seller(string name, int licenseNo)
         {
             this.Name = name;
-            this.TelNumber = telNumber;
+            this.LicenseNo = licenseNo;
         }
 
         public string GetName()
@@ -25,7 +25,7 @@ namespace CarsApp
 
         public void PrintPersonDetails()
         {
-            Console.WriteLine($"Customer {this.Name}, contact number{this.TelNumber}");
+            Console.WriteLine($"Seller representant {this.Name} (license no={this.LicenseNo})");
         }
     }
 }

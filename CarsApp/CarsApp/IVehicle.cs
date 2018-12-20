@@ -10,6 +10,8 @@ namespace CarsApp
     {
         int GetVehicleAge();
 
+        void ReportIssue(string issue);
+
         void PrintVehicleDetails();
     }
 }
