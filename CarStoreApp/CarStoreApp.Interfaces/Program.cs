@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CarsApp
+namespace CarStoreApp.Interfaces
 {
-    interface IPerson
+    class Program
     {
-        string GetName();
-
-        void PrintPersonDetails();
+        static void Main(string[] args)
+        {
+        }
     }
 }

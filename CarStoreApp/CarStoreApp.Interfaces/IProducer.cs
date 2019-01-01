@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CarsApp
+namespace CarStoreApp.Interfaces
 {
-    interface IStore
+    public interface IProducer
     {
-        void CheckStoreOffer(IPerson person);
+        string Name { get; set; }
 
-        void PrintStoreDetails();
+        string Address { get; set; }
     }
 }

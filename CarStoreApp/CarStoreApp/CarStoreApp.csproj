@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{819A5085-B5BA-450A-AF14-8D5CC5CA31E6}</ProjectGuid>
+    <ProjectGuid>{990CA644-1D78-4B0A-8397-C54651E78779}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>CarsApp</RootNamespace>
-    <AssemblyName>CarsApp</AssemblyName>
+    <RootNamespace>CarStoreApp</RootNamespace>
+    <AssemblyName>CarStoreApp</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,23 +43,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Car.cs" />
-    <Compile Include="Customer.cs" />
-    <Compile Include="IOrder.cs" />
-    <Compile Include="IPerson.cs" />
-    <Compile Include="IProducer.cs" />
-    <Compile Include="IStore.cs" />
-    <Compile Include="IVehicle.cs" />
-    <Compile Include="Message.cs" />
-    <Compile Include="Order.cs" />
-    <Compile Include="Seller.cs" />
-    <Compile Include="Producer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Store.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CarStoreApp.Interfaces\CarStoreApp.Interfaces.csproj">
+      <Project>{2c6880b9-7697-47a8-a32a-66aba0da36ee}</Project>
+      <Name>CarStoreApp.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CarStoreApp.Models\CarStoreApp.Models.csproj">
+      <Project>{b8a2b16b-1d77-42ab-891a-305e4fa96822}</Project>
+      <Name>CarStoreApp.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
